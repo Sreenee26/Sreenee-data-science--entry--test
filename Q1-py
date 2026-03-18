@@ -1,0 +1,26 @@
+Q1-py 
+def swap(x, y):
+    """
+    Task 1:
+    - Swap values of x and y using only x and y
+    - Return -1 if either is not numeric
+    - Print swapped values if valid
+    """
+
+    # Check if both are numeric (int or float)
+    if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+        return -1
+
+    # Swap using only x and y (no extra variable)
+    x = x + y
+    y = x - y
+    x = x - y
+
+    # Print swapped values
+    print("Swapped values:", x, y)
+
+
+# Task 2: Test cases
+swap("Apple", 10)   # Should return -1
+swap(9, 17)         # Should print swapped values
+
